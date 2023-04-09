@@ -9,5 +9,34 @@ public class Factorial {
          *
          */
 
+
+        int num = 5;
+
+        //recursion
+        int factRecursion = factorialUsingRecursion(num);
+        System.out.println("Factorial of the given number using recursion is : " + factRecursion);
+
+        //iteration
+        int factIteration = factorialUsingIteration(num);
+        System.out.println("Factorial of the given number using iteration is : " + factIteration);
+
+
+    }
+    // factorial iteration method :
+    public static int factorialUsingRecursion(int n) {
+        if (n == 0) {
+            return 1;
+        }
+        else {
+            return n * factorialUsingRecursion(n-1);
+        }
+    }
+    // factorial Iteration method :
+    public static int factorialUsingIteration(int n) {
+        int fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        return fact;
     }
 }

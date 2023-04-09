@@ -8,8 +8,40 @@ public class Pattern {
 		 *
 		 *
 		 */
-		
-
+		System.out.println("solution of find the pattern then implement the logic from this pattern: ");
+		pattern();
 
 	}
+
+	public static void pattern() {
+		int update = 0;
+		int numbers = 100;
+		int factor = 1;
+		boolean condition = true;
+
+		System.out.print(numbers + ",");
+
+		while (condition) {
+
+			for (int j = 1; j <= 10; j++) {
+
+				update = numbers - (j * factor);
+
+				if (update > 0) {
+					System.out.print(update + ",");
+				} else if (update == 0) {
+					System.out.print(update);
+				} else {
+					condition = false;
+				}
+
+				if (j == 10) {
+					numbers = update;
+				}
+			}
+			factor++;
+		}
+
+	}
+
 }
