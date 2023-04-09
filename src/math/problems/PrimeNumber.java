@@ -24,18 +24,21 @@ public class PrimeNumber {
 		List<Integer> primeNumbers = getPrimeNumbers(limit);
 
 		//Out put number of Prime numbers on the given range
-			System.out.println("Prime numbers from 1 to " + limit + " are: ");
+		System.out.println("Prime numbers from 1 to " + limit + " are: ");
 		for (int number : primeNumbers) {
 			System.out.println(number);
 		}
 
-		//Using  any MySql databases to store data and retrieve data.
+		//Using  any MySql to store data and retrieve data.
 		int[] primeNumbersArray = primeNumbers.stream().mapToInt(Integer::intValue).toArray();
 
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 		connectToSqlDB.insertDataFromArrayToSqlTable(primeNumbersArray, "prime_numbers", "SortingNumbers");
 		List<String> numbers = connectToSqlDB.readDataBase("prime_numbers", "SortingNumbers");
+		System.out.println("retrieve data from data base:");
 		printValue(numbers);
+
+
 	}
 
 	public static List<Integer> getPrimeNumbers(int limit) {
