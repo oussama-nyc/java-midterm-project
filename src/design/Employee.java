@@ -7,6 +7,9 @@ public interface Employee {
 	*/
 	//please read the following method and understand the business requirements of these following methods
 	//and then implement these in a concrete class.
+
+	String companyAddress = "11 Madison Ave # 18, New York, NY 10010";
+	String companyPhone = "212-625-5260";
 	
 	//employeeId() will return employee id.
 	public int employeeId();
@@ -22,5 +25,7 @@ public interface Employee {
 	
 	//employee benefit
 	public void benefitLayout();
+	public void displayAllDetails();
+	public void displayEarning();
 
 }

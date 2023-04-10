@@ -1,5 +1,6 @@
 package datastructure;
 import databases.ConnectToSqlDB;
+import design.Employee;
 
 import java.util.*;
 
@@ -7,7 +8,7 @@ import static algorithm.Numbers.printValue;
 
 public class UseMap {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		/*
 		 * Demonstrate how to use Map that includes storing and retrieving elements.
 		 * Add List<String> into a Map. Like, Map<String, List<string>> list = new HashMap<String, List<String>>();
@@ -72,9 +73,32 @@ public class UseMap {
 		listMap.put("Bob", bobList);
 
 
+		// Create an instance of the ConnectToSqlDB class
+		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 
+		// Loop through the employees and insert each employee into the MySQL table
+		for (Map.Entry<String, List<String>> entry : listMap.entrySet()) {
+			String key = entry.getKey(); // Get the key (employee name) from the map
+			List<String> valueList = entry.getValue(); // Get the value (list of fruits) from the map
+
+			// Convert the list to a string separated by commas
+			String value = String.join(",", valueList);
+
+			// Insert the key-value pair into the MySQL table
+			//connectToSqlDB.insertProfileToSqlTable("tbl_usemap", "SortingNumbers","key");
+
+		}
+
+           // Read the data from the MySQL table using the readDataBase() method
+		  List<String> employeeRead = connectToSqlDB.readDataBase("tbl_usemap", "SortingNumbers");
+
+		     //Print the data read from the MySQL table
+		    for (String employee : employeeRead) {
+				System.out.println(employee);
+			}
+		    }
 
 	}
-}
+
 
 
