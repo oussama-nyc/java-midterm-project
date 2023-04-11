@@ -22,7 +22,6 @@ public class FortuneEmployee {
 	 **/
 	public static void main(String[] args) throws Exception {
 
-
 		//*************************( Employee 1 )***************************//
 		System.out.println("//*************************( Employee 1 )***************************//");
 
@@ -45,7 +44,6 @@ public class FortuneEmployee {
 		employee1.calculateSalary();
 		employee1.holidayBonus();
 		employee1.assignDepartment();
-
 
 		//*************************( Employee 2 )***************************//
 
@@ -80,7 +78,6 @@ public class FortuneEmployee {
 		employee2.holidayBonus();
 		employee2.assignDepartment();
 
-
 		//*************************( Employee 3 )***************************//
 		System.out.println("//*************************( Employee 3 )***************************//");
 
@@ -104,8 +101,6 @@ public class FortuneEmployee {
 		employee3.holidayBonus();
 		employee3.assignDepartment();
 
-
-
 		//**************** Create an ArrayList to store employees *********************************
 		ArrayList<Employee> employees = new ArrayList<>();
 		employees.add(employee1);
@@ -116,7 +111,6 @@ public class FortuneEmployee {
 		for (int i=0; i<employees.size();i++){
 			System.out.println(employees.get(i));
 		}
-
 
         //*************************( Adding emplist to the database   )***************************//
 		// Create an instance of the ConnectToSqlDB class
@@ -135,7 +129,6 @@ public class FortuneEmployee {
 		for (String employee : employeeRead) {
 			System.out.println(employee);
 		}
-
 
 	}
 

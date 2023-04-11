@@ -25,15 +25,12 @@ public class EmployeeInfo extends AbstractEmployee implements Employee {
 	 */
 	public static final String COMPANY_NAME = "IBM Corporation";
 	public static final int MAX_EMPLOYEES = 1000000;
-
 	private int employeePerformance;
 	private double employeeSalary;
 	private int numberOfYearsWithCompany;
-
 	private String employeeDepartment;
 	private String employeeName;
 	private int employeeId;
-
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -44,12 +41,9 @@ public class EmployeeInfo extends AbstractEmployee implements Employee {
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
 	 */
-
 	//********* ( constructor ) ***********
-
 	public EmployeeInfo() {
 	}
-
 	public EmployeeInfo(char gender, String employeeAddress, String ssn, String email, String date_of_birth, int employeePerformance, double employeeSalary, int numberOfYearsWithCompany, String employeeDepartment, String employeeName, int employeeId) {
 		super(gender, employeeAddress, ssn, email, date_of_birth);
 		this.employeePerformance = employeePerformance;
@@ -61,57 +55,42 @@ public class EmployeeInfo extends AbstractEmployee implements Employee {
 	}
 
 	//*********** ( Setter and Getter ) *********
-
-
 	public String getEmployeeDepartment() {
 		return employeeDepartment;
 	}
-
 	public void setEmployeeDepartment(String employeeDepartment) {
 		this.employeeDepartment = employeeDepartment;
 	}
-
 	public String getEmployeeName() {
 		return employeeName;
 	}
-
 	public void setEmployeeName(String employeeName) {
 		this.employeeName = employeeName;
 	}
-
 	public int getEmployeeId() {
 		return employeeId;
 	}
-
 	public void setEmployeeId(int employeeId) {
 		this.employeeId = employeeId;
 	}
-
 	public int getEmployeePerformance() {
 		return employeePerformance;
 	}
-
 	public void setEmployeePerformance(int employeePerformance) {
 		this.employeePerformance = employeePerformance;
 	}
-
 	public double getEmployeeSalary() {
 		return employeeSalary;
 	}
-
 	public void setEmployeeSalary(double employeeSalary) {
 		this.employeeSalary = employeeSalary;
 	}
-
 	public int getNumberOfYearsWithCompany() {
 		return numberOfYearsWithCompany;
 	}
-
 	public void setNumberOfYearsWithCompany(int numberOfYearsWithCompany) {
 		this.numberOfYearsWithCompany = numberOfYearsWithCompany;
 	}
-
-
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -120,7 +99,6 @@ public class EmployeeInfo extends AbstractEmployee implements Employee {
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-
 	public static int calculateEmployeeBonus(double employeeSalary, int employeePerformance) {
 		double bonusPercentage;
 		if (employeePerformance >= 9) {
@@ -136,7 +114,6 @@ public class EmployeeInfo extends AbstractEmployee implements Employee {
 		int yearlyBonus = bonus*12;
 		return yearlyBonus;
 	}
-	
 	/*
 	 * This methods should calculate Employee Pension based on salary and numbers of years with the company.
 	 * Then it will return the total pension. So you need to implement the logic.
@@ -234,7 +211,6 @@ public class EmployeeInfo extends AbstractEmployee implements Employee {
 		System.out.println("Full Time Employee receive medical insurance, retirement plans...");
 	}
 
-
 	@Override
 	public String toString() {
 		return  "\n * Employee Performance =" + employeePerformance +
@@ -311,7 +287,6 @@ public class EmployeeInfo extends AbstractEmployee implements Employee {
 					break;
 			}
 			return date;
-
 		}
 	}
 }

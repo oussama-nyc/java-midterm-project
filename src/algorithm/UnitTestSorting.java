@@ -10,8 +10,8 @@ public class UnitTestSorting {
     public static void main(String[] args) {
         int [] unSortedArray = {6,9,2,5,1,0,4};
         int [] sortedArray =   {0,1,2,4,5,6,9};
-     //********************************************************************************************//
-        // selectionSort algorithm
+
+        //*************************( selectionSort algorithm )************************************
         //Create Sort object
         Sort selection = new Sort();
         //apply unsorted array to selectionSort.
@@ -27,7 +27,7 @@ public class UnitTestSorting {
         Sort.printSortedArray(selection.selectionSort(unSortedArray));
         //Now implement Unit test for rest of the soring algorithm...................below
         //********************************************************************************************//
-        //insertionSort algorithm
+        //***************************( insertionSort algorithm )*************************************
         //Create Sort object
         Sort insertion = new Sort();
         //apply unsorted array to insertionSort.
@@ -42,7 +42,7 @@ public class UnitTestSorting {
         }
         Sort.printSortedArray(insertion.insertionSort(unSortedArray));
         //********************************************************************************************//
-          //bubbleSort algorithm
+          //******************************( bubbleSort algorithm )**********************************
         //Create Sort object
         Sort bubble = new Sort();
         //apply unsorted array to bubbleSort.
@@ -57,7 +57,7 @@ public class UnitTestSorting {
         }
         Sort.printSortedArray(bubble.bubbleSort(unSortedArray));
         //********************************************************************************************//
-        //mergeSort algorithm
+        //*************************************( mergeSort algorithm )*******************************
         //Create Sort object
         Sort merge = new Sort();
         //apply unsorted array to mergeSort.
@@ -73,7 +73,7 @@ public class UnitTestSorting {
 
         Sort.printSortedArray(merge.bubbleSort(unSortedArray));
         //********************************************************************************************//
-        //quickSort algorithm
+        //*****************************************( quickSort algorithm )***************************
         //Create Sort object
         Sort quick = new Sort();
         //apply unsorted array to quickSort.
@@ -90,7 +90,7 @@ public class UnitTestSorting {
         Sort.printSortedArray(quick.quickSort(unSortedArray));
 
         //********************************************************************************************//
-        //heapSort algorithm
+        //*************************************( heapSort algorithm )*******************************
         //Create Sort object
         Sort heap = new Sort();
         //apply unsorted array to heapSort.
@@ -106,7 +106,7 @@ public class UnitTestSorting {
 
         Sort.printSortedArray(heap.heapSort(unSortedArray));
         //********************************************************************************************//
-        //bucketSort algorithm
+        //**************************************( bucketSort algorithm )******************************
         //Create Sort object
         Sort bucket = new Sort();
          // apply unsorted array to bucketSort.
@@ -122,7 +122,7 @@ public class UnitTestSorting {
 
         Sort.printSortedArray(bucket.bucketSort(unSortedArray));
         //********************************************************************************************//
-        //shellSort algorithm
+        //************************************( shellSort algorithm )********************************
         //Create Sort object
         Sort shell = new Sort();
         // apply unsorted array to shellSort.

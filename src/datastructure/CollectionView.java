@@ -21,5 +21,4 @@ public static void main(String[] args) {
         System.out.println("the Collection view of values present in map is : "+ map.values());
 
     }
-
 }

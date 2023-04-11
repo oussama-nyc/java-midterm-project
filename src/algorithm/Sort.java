@@ -9,8 +9,8 @@ public class Sort {
      * Please implement all the sorting algorithm. Feel free to add helper methods.
      * Store all the sorted data into one of the databases.
      */
-    //********************************************************************************************//
-    // selectionSort algorithm
+
+    //********************( selectionSort algorithm )******************************************
     public int[] selectionSort(int[] array) {
         final long startTime = System.currentTimeMillis();
         int[] list = array;
@@ -33,8 +33,7 @@ public class Sort {
         return list;
     }
 
-    //********************************************************************************************//
-    //insertionSort algorithm
+    //***********************( insertionSort algorithm )******************************************
     public int[] insertionSort(int[] array) {
         final long startTime = System.currentTimeMillis();
         int[] list = array;
@@ -54,8 +53,7 @@ public class Sort {
         return list;
     }
 
-    //********************************************************************************************//
-    //bubbleSort algorithm
+    //***********************( bubbleSort algorithm )**********************************************
     public int[] bubbleSort(int[] array) {
         final long startTime = System.currentTimeMillis();
         int[] list = array;
@@ -78,8 +76,8 @@ public class Sort {
         this.executionTime = executionTime;
         return list;
     }
-    //********************************************************************************************//
-    // mergeSort algorithm
+
+    //***************************( mergeSort algorithm )*******************************************
     public  int[] mergeSort(int[] arr) {
         final long startTime = System.currentTimeMillis();
         if (arr == null || arr.length <= 1) {
@@ -128,8 +126,8 @@ public class Sort {
 
         return result;
     }
-    //********************************************************************************************//
-   //  quickSort algorithm
+
+   //************************( quickSort algorithm )**********************************************
 
     public int[] quickSort(int[] arr) {
         final long startTime = System.currentTimeMillis();
@@ -173,8 +171,8 @@ public class Sort {
             quickSortHelper(arr, i, high);
         }
     }
-    //********************************************************************************************//
-    //heapSort algorithm
+
+    //***************************************( heapSort algorithm )*********************************
     public int [] heapSort(int [] array){
         final long startTime = System.currentTimeMillis();
         int [] list = array;
@@ -223,8 +221,8 @@ public class Sort {
         }
     }
 
-    //********************************************************************************************//
-   //bucketSort algorithm
+
+   //**************************************( bucketSort algorithm )*****************************
     public int[] bucketSort(int[] array) {
         final long startTime = System.currentTimeMillis();
 
@@ -259,8 +257,8 @@ public class Sort {
 
         return array;
     }
-    //********************************************************************************************//
-    //shellSort algorithm
+
+    //**************************( shellSort algorithm )*******************************************
     public int [] shellSort(int [] array){
         int [] list = array;
         final long startTime = System.currentTimeMillis();

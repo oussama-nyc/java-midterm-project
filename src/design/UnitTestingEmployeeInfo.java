@@ -19,21 +19,14 @@ public class UnitTestingEmployeeInfo {
         employee.calculateSalary();
         employee.holidayBonus();
         employee.assignDepartment();
-
-
-
-
-
   }
 
-
-  //**************Test the method : calculateEmployeeBonus(); *****************************
+     //**************Test the method: calculateEmployeeBonus(); *****************************
     @Test
     public void testcalculateEmployeeBonus() {
         int expectedResult = 1052;
         int actualResult = EmployeeInfo.calculateEmployeeBonus(1200, 7);
         Assert.assertEquals("Test faild",expectedResult,actualResult);
     }
-
 
 }

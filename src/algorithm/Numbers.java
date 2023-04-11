@@ -36,8 +36,8 @@ public class Numbers {
 
 
 		//By following above, Continue for rest of the Sorting Algorithm....
-        //********************************************************************************************//
-		//insertionSort algorithm
+
+		//*************************( insertionSort algorithm )**************************************
 		algo.insertionSort(num);
 		long insertionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in insertion Sort take: " + insertionSortExecutionTime + " milli sec");
@@ -45,48 +45,47 @@ public class Numbers {
 		List<String> numbers2 = connectToSqlDB.readDataBase("insertion_sort", "SortingNumbers");
 		//printValue(numbers2);
 
-		//********************************************************************************************//
-		//bubbleSort algorithm
+		//*****************************( bubbleSort algorithm )****************************************
 		algo.bubbleSort(num);
 		long bubbleSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
 		connectToSqlDB.insertDataFromArrayToSqlTable(num, "bubble_sort", "SortingNumbers");
 		List<String> numbers3 = connectToSqlDB.readDataBase("bubble_sort", "SortingNumbers");
 		//printValue(numbers3);
-		//********************************************************************************************//
-		// mergeSort algorithm
+
+		//*********************************************( mergeSort algorithm )***********************
 		algo.mergeSort(num);
 		long mergeSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in merge Sort take: " + mergeSortExecutionTime + " milli sec");
 		connectToSqlDB.insertDataFromArrayToSqlTable(num, "merge_sort", "SortingNumbers");
 		List<String> numbers4 = connectToSqlDB.readDataBase("merge_sort", "SortingNumbers");
 		//printValue(numbers4);
-		//********************************************************************************************//
-		// quickSort algorithm
+
+		//********************************( quickSort algorithm )**********************************
 		algo.quickSort(num);
 		long quickSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in quick Sort take: " + quickSortExecutionTime + " milli sec");
 		connectToSqlDB.insertDataFromArrayToSqlTable(num, "quick_sort", "SortingNumbers");
 		List<String> numbers5 = connectToSqlDB.readDataBase("quick_sort", "SortingNumbers");
 		//printValue(numbers5);
-		//********************************************************************************************//
-		// heapSort algorithm
+
+		//****************************************( heapSort algorithm )*******************************
 		algo.heapSort(num);
 		long heapSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in heap Sort take: " + heapSortExecutionTime + " milli sec");
 		connectToSqlDB.insertDataFromArrayToSqlTable(num, "heap_sort", "SortingNumbers");
 		List<String> numbers6 = connectToSqlDB.readDataBase("heap_sort", "SortingNumbers");
 		//printValue(numbers6);
-		//********************************************************************************************//
-		// bucketSort algorithm
+
+		//***********************************( bucketSort algorithm )******************************
 		algo.bucketSort(num);
 		long bucketSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in bucket Sort take: " + bucketSortExecutionTime + " milli sec");
 		connectToSqlDB.insertDataFromArrayToSqlTable(num, "bucket_sort", "SortingNumbers");
 		List<String> numbers7 = connectToSqlDB.readDataBase("bucket_sort", "SortingNumbers");
 		//printValue(numbers7);
-		//********************************************************************************************//
-		// shellSort algorithm
+
+		//****************************( shellSort algorithm )****************************************
 		algo.shellSort(num);
 		long shellSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in shell Sort take: " + shellSortExecutionTime + " milli sec");
@@ -131,8 +130,6 @@ public class Numbers {
 
 		System.out.println("The minimum execution time is: " + minExecutionTime + " milli sec with " + minExecutionAlgorithm);
 
-
-
 	}
 
 	public static void storeRandomNumbers(int [] num){
@@ -141,7 +138,6 @@ public class Numbers {
 			num[i] = rand.nextInt(10000);
 		}
 	}
-
 
 	public static void randomize( int arr[], int n)
 	{
